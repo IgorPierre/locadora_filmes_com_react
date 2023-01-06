@@ -1,25 +1,40 @@
-import { Container } from "./styles"
+import { Container, Movie, MovieList } from "./styles"
 import img from "../../assets/avatar.jpg"
+import img2 from "../../assets/reileao.jpg"
+import img3 from "../../assets/homemdeferro.jpg"
 
 function Home() {
+
+    const movies = [
+        {
+            title: "Avatar",
+            image_url: img
+        },
+        {
+            title: "Rei Leão",
+            image_url: img2
+        },
+        {
+            title: "Homem de Ferro",
+            image_url: img3
+        }
+    ]
+
     return(
         <Container>
-            <h1>Filmes</h1>
+            <h1>Filmes em alta</h1>
 
-            <ul>
-                <li>
-                    <img src={img} alt="capara do filme avatar"/>
-                    <span>Avatar - O caminho da água</span>
-                </li>
-                <li>
-                    <img src={img} alt="capara do filme avatar"/>
-                    <span>Avatar - O caminho da água</span>
-                </li>
-                <li>
-                    <img src={img} alt="capara do filme avatar"/>
-                    <span>Avatar - O caminho da água</span>
-                </li>
-            </ul>
+            <MovieList>
+
+                {movies.map(movie =>{
+                    return(
+                        <Movie>
+                            <a href="https://google.com.br"><img src={movie.image_url} alt="capara do filme avatar"/></a>
+                            <span>{movie.title}</span>
+                        </Movie>
+                    )
+                })}
+            </MovieList>
         </Container>    
     )
 }
