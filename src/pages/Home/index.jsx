@@ -1,24 +1,18 @@
 import { Container, Movie, MovieList } from "./styles"
-import img from "../../assets/avatar.jpg"
-import img2 from "../../assets/reileao.jpg"
-import img3 from "../../assets/homemdeferro.jpg"
+
+import { useEffect, useState } from "react"
 
 function Home() {
 
-    const movies = [
-        {
-            title: "Avatar",
-            image_url: img
-        },
-        {
-            title: "Rei Leão",
-            image_url: img2
-        },
-        {
-            title: "Homem de Ferro",
-            image_url: img3
-        }
-    ]
+    const [movies, setMovies] = useState([])
+
+    const image_path = "https://image.tmdb.org/t/p/w500/"
+
+    useEffect(() => {
+        fetch('https://api.themoviedb.org/3/movie/popular?api_key=cdf6363fb75f2ee18a6c87585956511f&language=en-US&page=1')
+        .then(response => response.json())
+        .then(data => setMovies(data.results))
+    }, [])
 
     return(
         <Container>
@@ -28,8 +22,8 @@ function Home() {
 
                 {movies.map(movie =>{
                     return(
-                        <Movie>
-                            <a href="https://google.com.br"><img src={movie.image_url} alt="capara do filme avatar"/></a>
+                        <Movie key={movie.id}>
+                            <a href="https://google.com.br"><img src={image_path + movie.poster_path} alt="capara do filme avatar"/></a>
                             <span>{movie.title}</span>
                         </Movie>
                     )
