@@ -1,6 +1,7 @@
-import { Container, Movie, MovieList } from "./styles"
-
+import { Movie, MovieList } from "./styles"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
+import { Container } from "../../components/Container"
 
 function Home() {
 
@@ -19,11 +20,10 @@ function Home() {
             <h1>Filmes em alta</h1>
 
             <MovieList>
-
                 {movies.map(movie =>{
                     return(
                         <Movie key={movie.id}>
-                            <a href="https://google.com.br"><img src={image_path + movie.poster_path} alt="capara do filme avatar"/></a>
+                            <Link to={`/details/${movie.id}`}><img src={image_path + movie.poster_path} alt="capara do filme avatar"/></Link>
                             <span>{movie.title}</span>
                         </Movie>
                     )
