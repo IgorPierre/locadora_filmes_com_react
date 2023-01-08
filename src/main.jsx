@@ -9,6 +9,7 @@ import App from './App'
 import './index.css'
 import Details from './pages/Details';
 import Home from './pages/Home';
+import Results from './pages/Results';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "/details/:id",
         element: <Details />,
+      },
+      {
+        path: "/results/:query",
+        element: <Results />,
       },
     ],
   },

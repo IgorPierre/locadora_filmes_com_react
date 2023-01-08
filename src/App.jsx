@@ -1,18 +1,22 @@
 import logoImg from "../src/logo.png"
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { Header, SearchArea } from './components/Header';
 import { BiSearch } from "react-icons/bi";
+import { useState } from "react";
 
 function App() {
+
+  const [query, setQuery] = useState([])
+
   return (
     <div className="App">
       <>
         <Header>
-          <img src={logoImg} alt="logo" />
+          <a href="/"><img src={logoImg} alt="logo" /></a>
 
-          <SearchArea action="">
-            <input type="text" placeholder="Pesquisar filme"/>
-            <button><BiSearch/></button>
+          <SearchArea action={`/results/${query}`} method="get">
+            <input id="searchBar" name="searchBar" type="text" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Pesquisar por filme"/>
+            <Link to={`/results/${query}`}><BiSearch/></Link>
           </SearchArea>
         </Header>
         

@@ -10,11 +10,19 @@ export const Container = styled.div`
     min-height: 90vh;
     padding-bottom: 40px;
 
-    h1 {
-        font-size: 3rem;
+    h2 {
+        font-size: 2.4rem;
         font-weight: 700;
         color: #9F79F2;
         margin-bottom: 15px;
+    }
+
+    .back-page {
+        position: absolute;
+        top: 12vh;
+        left: 3%;
+        font-size: 40px;
+        color: #F2D6BD;
     }
 
     .carousel {
@@ -23,15 +31,15 @@ export const Container = styled.div`
         text-align: center;
         width: 100%;
         margin-bottom: 50px;
-        padding: 10px 30px;
+        padding: 20px 30px;
         
-        cursor: grab;
         overflow: hidden;
     }
 
     .inner {
         display: flex;
         width: 100%;
+        cursor: grab;
     }
 
     .item img {

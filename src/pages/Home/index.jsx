@@ -11,7 +11,7 @@ function Home() {
 
     const [movies, setMovies] = useState([])
 
-    const [latests, setLatests] = useState([])
+    const [topRateds, settopRateds] = useState([])
 
     const image_path = "https://image.tmdb.org/t/p/w500/"
 
@@ -24,7 +24,7 @@ function Home() {
     useEffect(() => {
         fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=cdf6363fb75f2ee18a6c87585956511f&language=en-US&page=1')
         .then(response => response.json())
-        .then(data => setLatests(data.results))
+        .then(data => settopRateds(data.results))
     }, [])
 
     useEffect(()=>{
@@ -34,24 +34,24 @@ function Home() {
     return(
         <Container>
             <motion.div ref={carousel} className="carousel" whileTap={{ cursor: "grabbing"}}>
-                <h1>Melhores filmes</h1>
+                <h2>Melhores filmes</h2>
                 <motion.div 
                     className="inner" 
                     drag="x"
                     dragConstraints={{ right:0, left: -width }}
                 >
-                    {latests.map(latest =>{
+                    {topRateds.map(topRated =>{
                         return(
-                            <div className="item" key={latest.id}>
-                                <img src={image_path + latest.poster_path} alt={`capa do filme ${latest.title}`}/>
-                                <Link to={`/details/${latest.id}`}>Ver detalhes</Link>
+                            <div className="item" key={topRated.id}>
+                                <img src={image_path + topRated.poster_path} alt={`capa do filme ${topRated.title}`}/>
+                                <Link to={`/details/${topRated.id}`}>Ver detalhes</Link>
                             </div>
                         )
                     })} 
                 </motion.div>
             </motion.div>
 
-            <h1>Em alta</h1>
+            <h2>Em alta</h2>
             <MovieList>
                 {movies.map(movie =>{
                     return(

@@ -12,6 +12,7 @@ export const Header = styled.header`
 
     img {
         width: 180px;
+        cursor: pointer;
     }
 `
 export const SearchArea = styled.form`
@@ -21,16 +22,23 @@ export const SearchArea = styled.form`
         color: #393E59;
         padding: 8px;
         width: 85%;
-        border: 0;
+        border: #C8C1D9 1px solid;
         border-radius: 15px 0 0 15px;
     }
 
-    button {
-        background-color: #4AD96D;
-        color: #393E59;
-        width: 15%;
-        padding: 8px 5px;
-        border: 0;
+    a {
+        background-color: #6C568C;
+        color: #FFF;
+        padding: 4px 15px;
+        border: #6C568C 1px solid;
         border-radius: 0 15px 15px 0;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: #4AD96D;
+            color: #393E59;
+        }
     }
 `
