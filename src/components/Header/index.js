@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Header = styled.header`
-    background-color: #C8C1D9;
+    background-color: #F2ECE9;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -13,29 +13,24 @@ export const Header = styled.header`
     img {
         width: 180px;
     }
+`
+export const SearchArea = styled.form`
+    width: 40%;
 
-    nav {
-        display: flex;
-        justify-content: space-evenly;
-
-        width: 30%;
+    input {
+        color: #393E59;
+        padding: 8px;
+        width: 85%;
+        border: 0;
+        border-radius: 15px 0 0 15px;
     }
 
-    a {
-        text-decoration: none;
-        color: #453073;
-
-        font-size: 18px;
-        font-weight: 700;
-
-        transition: 0.2s;
-
-        &:hover{
-            color: #6C568C;
-            box-shadow: 0 3px 0 #F2D6BD;
-           
-        }
+    button {
+        background-color: #4AD96D;
+        color: #393E59;
+        width: 15%;
+        padding: 8px 5px;
+        border: 0;
+        border-radius: 0 15px 15px 0;
     }
-
-    
 `

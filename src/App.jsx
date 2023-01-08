@@ -1,6 +1,7 @@
 import logoImg from "../src/logo.png"
-import { Outlet, Link } from "react-router-dom";
-import { Header } from './components/Header';
+import { Outlet } from "react-router-dom";
+import { Header, SearchArea } from './components/Header';
+import { BiSearch } from "react-icons/bi";
 
 function App() {
   return (
@@ -9,9 +10,10 @@ function App() {
         <Header>
           <img src={logoImg} alt="logo" />
 
-          <nav>
-            <Link to={"/"}>Início</Link>
-          </nav>
+          <SearchArea action="">
+            <input type="text" placeholder="Pesquisar filme"/>
+            <button><BiSearch/></button>
+          </SearchArea>
         </Header>
         
         <Outlet />

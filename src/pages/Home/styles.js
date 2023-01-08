@@ -15,6 +15,7 @@ export const Movie = styled.li`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 
     transition: 0.4s;
 
@@ -32,8 +33,7 @@ export const Movie = styled.li`
         transform: scale(1.1);
 
         span {
-            color: #F66783;
-            box-shadow: -8px 0 0 #8F94A8;
+            color: #4AD96D;
             padding-left: 3px;
         }
     }
