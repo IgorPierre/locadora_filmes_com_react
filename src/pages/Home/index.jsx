@@ -5,7 +5,7 @@ import { Container } from "../../components/Container"
 import { motion } from "framer-motion"
 
 function Home() {
-    const carousel = useRef()
+    const carousel = useRef(0)
     
     const [width, setWidth] = useState(0)
 
