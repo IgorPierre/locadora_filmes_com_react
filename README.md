@@ -1,4 +1,4 @@
-## **<h2 align="center"> Lock Movies 📽️</h2>**
+## **<h2 align="center"> Loc-Movies 📽️</h2>**
 
 
 ## :pushpin: Sobre este projeto:
