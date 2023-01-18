@@ -1,4 +1,4 @@
-import logoImg from "../src/logo.png"
+import logoImg from "../src/assets/logo.png"
 import { Link, Outlet } from "react-router-dom";
 import { Header, SearchArea } from './components/Header';
 import { BiSearch } from "react-icons/bi";
