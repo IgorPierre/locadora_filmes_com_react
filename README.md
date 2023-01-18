@@ -15,7 +15,7 @@ Trata-se de uma aplicação onde o usuário pode visualizar os filmes e seus det
 ## :star: Tela principal da aplicação
 
 <p align="center">
-  <img src="./src/assets/fullsixe-movies.png"/>
+  <img src="./src/assets/fullsize-movies.png" alt="imagem da aplicação" />
 </p>
 
 <br>
