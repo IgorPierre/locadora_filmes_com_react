@@ -6,7 +6,7 @@ Trata-se de uma aplicação onde o usuário pode visualizar os filmes e seus det
 
 <br>
 
-## :rocket: Technologies used:
+## :rocket: Tecnologias usadas:
 <p align="center">
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react"  width="70" height="70"/>
 </p>
