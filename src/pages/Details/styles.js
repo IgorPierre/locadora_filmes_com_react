@@ -23,6 +23,11 @@ export const DetailsArea = styled.div`
         max-width: 350px;
     }
 
+    @media(max-width: 980px) {
+        flex-direction: column;
+        padding-top: 8rem;
+    }
+
 `
 
 export const Description = styled.div`
@@ -42,6 +47,10 @@ export const Description = styled.div`
 
     span {
         color: #F2D6BD;
+    }
+
+    @media(max-width: 980px) {
+        padding: 8rem 0;
     }
 
 `

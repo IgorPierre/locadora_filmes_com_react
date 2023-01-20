@@ -11,12 +11,13 @@ export const Header = styled.header`
     
 
     img {
-        width: 180px;
+        width: 10rem;
         cursor: pointer;
     }
 `
 export const SearchArea = styled.form`
-    width: 40%;
+    display: flex;
+    width: 50%;
 
     input {
         color: #393E59;
